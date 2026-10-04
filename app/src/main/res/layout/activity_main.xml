@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F7FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Judul Aplikasi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Konversi Volume ke Massa Air"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aplikasi sederhana penghitung massa air murni (Densitas = 1 kg/L)"
+            android:textSize="13sp"
+            android:textColor="#546E7A"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Input Volume -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Masukkan Nilai Volume:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#37474F"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etVolume"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="numberDecimal"
+            android:hint="Contoh: 1.5"
+            android:text="1"
+            android:textSize="16sp"
+            android:paddingHorizontal="14dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Satuan Volume -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Pilih Satuan Volume Asal:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#37474F"
+            android:layout_marginBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spVolumeUnit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Satuan Massa -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Pilih Target Satuan Massa:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#37474F"
+            android:layout_marginBottom="6dp" />
+
+        <Spinner
+            android:id="@+id/spMassUnit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Tombol Hitung -->
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Hitung Massa Air"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#0288D1"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Kotak Hasil -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="#E1F5FE">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HASIL PERHITUNGAN:"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#0277BD"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 kg"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#01579B"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/tvFormula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rumus: Massa = Volume × 1 kg/L"
+                android:textSize="13sp"
+                android:textColor="#0277BD" />
+        </LinearLayout>
+
+        <!-- Informasi Tambahan -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Catatan: Standar fisika massa jenis air murni pada 4°C adalah 1.000 kg/m³ atau 1 kg/Liter (1 mL = 1 gram)."
+            android:textSize="12sp"
+            android:textColor="#78909C"
+            android:layout_marginTop="24dp"
+            android:lineSpacingExtra="3dp" />
+
+    </LinearLayout>
+</ScrollView>
